@@ -110,3 +110,31 @@ h2.q{font-size:2.5em; line-height:1.05;}
 .card li+li{margin-top:.35em;}
 .big{font-family:'Anton', sans-serif; font-size:3.2em; line-height:1; display:block; margin:.1em 0 .2em;}
 .g4{grid-template-columns:repeat(4,1fr);}
+
+/* ===== Theme A: lab notebook (light), chosen 2026-10-23. Overrides the dark base above. ===== */
+body{background-image:none;}
+.dot{background:var(--red);}
+.bar .chap i{box-shadow:0 0 0 1.5px var(--t-ink);}
+.foot a{border-color:var(--t-line); color:var(--t-muted);}
+.foot a:hover{color:var(--t-ink); border-color:var(--t-ink);}
+.foot, .hint, .src{color:var(--t-muted);}
+.bar{color:var(--t-muted);}
+p.lead{color:var(--t-soft);}
+.outline{border-color:var(--t-line); color:var(--t-ink);}
+.chain .arrow{color:var(--t-muted);}
+.map.focus .card{opacity:.35;}
+.map.focus .card.current{box-shadow:0 1.2em 2.4em rgba(0,0,0,.18);}
+.eyebrow{color:var(--t-eyebrow, var(--t-ink));}
+/* A. Lab notebook: graph paper, sentence-case grotesque, hard shadows */
+:root{--t-bg:#f5f4ee; --t-ink:#16181d; --t-soft:#3b3d44; --t-muted:#7a7c84; --t-line:#16181d; --t-grid:rgba(63,127,224,.13);}
+body{background:var(--t-bg); color:var(--t-ink); font-family:'Figtree', sans-serif;
+  background-image:linear-gradient(var(--t-grid) 1px, transparent 1px), linear-gradient(90deg, var(--t-grid) 1px, transparent 1px);
+  background-size:28px 28px;}
+h1,h2,.card h3,.map .card .num,.big,.chain .arrow{font-family:'Bricolage Grotesque', sans-serif; text-transform:none; font-weight:800; letter-spacing:-.02em; line-height:1.02;}
+h1{font-size:4.6em;} h2{font-size:3em;} h2.q{font-size:2.2em;} .card h3{font-size:1.5em;}
+.bar,.eyebrow,.tag,.hint,.src,.foot{font-family:'JetBrains Mono', monospace;}
+.eyebrow{display:inline-block; align-self:flex-start; background:var(--chap); color:var(--t-ink); padding:.35em .7em; border:1.5px solid var(--t-ink);}
+.card{border-radius:10px; border:1.5px solid var(--t-ink); box-shadow:5px 5px 0 var(--t-ink);}
+.outline{background:#fff;}
+.white{background:#fff;}
+.pause h1{color:var(--t-ink); text-decoration:underline; text-decoration-color:var(--chap); text-decoration-thickness:.12em; text-underline-offset:.08em;}
