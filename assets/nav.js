@@ -66,6 +66,9 @@ const SLIDES = [
 
 const CHAPTER_COLOURS = ["var(--c0)", "var(--c1)", "var(--c2)", "var(--c3)", "var(--c4)"];
 
+// First slide of each chapter: map cards and the chapters page link here.
+const CHAPTER_START = ["c0-01-question.html", "c1-00-map.html", "c2-00-map.html", "c3-00-map.html", "c4-00-map.html"];
+
 (function () {
   const file = location.pathname.split("/").pop() || SLIDES[0];
   const i = SLIDES.indexOf(file);
@@ -81,7 +84,7 @@ const CHAPTER_COLOURS = ["var(--c0)", "var(--c1)", "var(--c2)", "var(--c3)", "va
     const next = i >= 0 && i < SLIDES.length - 1 ? SLIDES[i + 1] : null;
     foot.innerHTML =
       `<a href="${prev || "#"}" aria-disabled="${!prev}">← Back</a>` +
-      `<span>${i + 1} / ${SLIDES.length}</span>` +
+      `<span><a href="index.html" class="home">All chapters</a> ${i + 1} / ${SLIDES.length}</span>` +
       `<a href="${next || "#"}" aria-disabled="${!next}">Next →</a>`;
   }
 
@@ -101,4 +104,10 @@ const CHAPTER_COLOURS = ["var(--c0)", "var(--c1)", "var(--c2)", "var(--c3)", "va
     if (["ArrowLeft", "PageUp", "Backspace"].includes(e.key)) { e.preventDefault(); back(); }
   });
   document.querySelector(".content")?.addEventListener("click", forward);
+
+  // map slides: each chapter card opens that chapter
+  document.querySelectorAll(".map .card").forEach((card, n) => {
+    card.style.cursor = "pointer";
+    card.addEventListener("click", (e) => { e.stopPropagation(); location.href = CHAPTER_START[n]; });
+  });
 })();

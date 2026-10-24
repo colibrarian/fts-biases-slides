@@ -138,3 +138,4 @@ h1{font-size:4.6em;} h2{font-size:3em;} h2.q{font-size:2.2em;} .card h3{font-siz
 .outline{background:#fff;}
 .white{background:#fff;}
 .pause h1{color:var(--t-ink); text-decoration:underline; text-decoration-color:var(--chap); text-decoration-thickness:.12em; text-underline-offset:.08em;}
+.foot span .home{margin-right:1.2em;}
