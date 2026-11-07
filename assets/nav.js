@@ -2,11 +2,9 @@
 const SLIDES = [
   "00-cover.html",
   "00-map.html",
+  "c0-00-volunteer.html",
   "c0-02-two-systems.html",
   "c0-03-heuristic-bias-fallacy.html",
-  "c0-04-quiz-bat-ball.html",
-  "c0-05-quiz-lily-pads.html",
-  "c0-06-quiz-machines.html",
   "c0-07-not-stupidity.html",
   "c1-00-map.html",
   "c1-01-question.html",
@@ -14,7 +12,6 @@ const SLIDES = [
   "c1-07-availability.html",
   "c1-09-groups.html",
   "c1-10-catch.html",
-  "c1-11-teens.html",
   "c2-00-map.html",
   "c2-01-question.html",
   "c2-02-coins.html",
@@ -22,7 +19,6 @@ const SLIDES = [
   "c2-06-one-story.html",
   "c2-07-generalisation.html",
   "c2-08-catch.html",
-  "c2-09-teens.html",
   "c3-00-map.html",
   "c3-01-question.html",
   "c3-02-portraits.html",
@@ -34,7 +30,6 @@ const SLIDES = [
   "c3-11-normal.html",
   "c3-13-cultural.html",
   "c3-14-catch.html",
-  "c3-15-teens.html",
   "c4-00-map.html",
   "c4-01-question.html",
   "c4-02-speech.html",
@@ -48,7 +43,6 @@ const SLIDES = [
   "c4-11-teleology.html",
   "c4-12-quiz.html",
   "c4-13-catch.html",
-  "c4-14-teens.html",
   "c4-15-end.html"
 ];
 
@@ -56,7 +50,8 @@ const SLIDES = [
 const TITLES = {
  "00-cover.html": "Cover",
  "00-map.html": "Map",
- "c0-01-question.html": "Why did we hear different things",
+ "c0-00-volunteer.html": "Experiment: eyes closed",
+ "c0-01-question.html": "Why did we see different things",
  "c0-02-two-systems.html": "Two systems",
  "c0-03-heuristic-bias-fallacy.html": "Heuristic, bias, fallacy",
  "c0-04-quiz-bat-ball.html": "Quiz: bat and ball",
@@ -74,7 +69,6 @@ const TITLES = {
  "c1-08-priming.html": "Priming",
  "c1-09-groups.html": "Group work: find the filter",
  "c1-10-catch.html": "Catch it in yourself",
- "c1-11-teens.html": "Show it to teens",
  "c2-00-map.html": "Map: chapter 2",
  "c2-01-question.html": "How do I know that",
  "c2-02-coins.html": "Coins",
@@ -84,13 +78,12 @@ const TITLES = {
  "c2-06-one-story.html": "One vivid case",
  "c2-07-generalisation.html": "Hasty generalisation",
  "c2-08-catch.html": "Catch it in yourself",
- "c2-09-teens.html": "Show it to teens",
  "c3-00-map.html": "Map: chapter 3",
  "c3-01-question.html": "Why did they do that",
- "c3-02-portraits.html": "Portraits",
+ "c3-02-portraits.html": "Portrait and voice message",
  "c3-03-pause.html": "Pause: compare",
  "c3-04-attribution.html": "Fundamental attribution error",
- "c3-05-projection.html": "Projection",
+ "c3-05-projection.html": "False consensus",
  "c3-06-double-standards.html": "Double standards",
  "c3-07-negativity.html": "Negativity bias",
  "c3-08-video-topic.html": "Your team video",
@@ -98,9 +91,8 @@ const TITLES = {
  "c3-10-towers.html": "Towers",
  "c3-11-normal.html": "What is normal",
  "c3-12-just-world.html": "Just-world belief",
- "c3-13-cultural.html": "Cultural bias",
+ "c3-13-cultural.html": "Ethnocentrism",
  "c3-14-catch.html": "Catch it in yourself",
- "c3-15-teens.html": "Show it to teens",
  "c4-00-map.html": "Map: chapter 4",
  "c4-01-question.html": "Who is pushing me",
  "c4-02-speech.html": "Count the tricks",
@@ -115,14 +107,13 @@ const TITLES = {
  "c4-11-teleology.html": "Teleology",
  "c4-12-quiz.html": "Quiz: name the trick",
  "c4-13-catch.html": "Catch it in yourself",
- "c4-14-teens.html": "Show it to teens",
  "c4-15-end.html": "End"
 };
 
 const CHAPTER_COLOURS = ["var(--c0)", "var(--c1)", "var(--c2)", "var(--c3)", "var(--c4)"];
 
 // First slide of each chapter: map cards and the chapters page link here.
-const CHAPTER_START = ["c0-02-two-systems.html", "c1-00-map.html", "c2-00-map.html", "c3-00-map.html", "c4-00-map.html"];
+const CHAPTER_START = ["c0-00-volunteer.html", "c1-00-map.html", "c2-00-map.html", "c3-00-map.html", "c4-00-map.html"];
 
 (function () {
   const file = location.pathname.split("/").pop() || SLIDES[0];
