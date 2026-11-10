@@ -60,7 +60,7 @@ const TITLES = {
  "00-cover.html": "Cover",
  "00-map.html": "Map",
  "c0-00-volunteer.html": "Experiment: eyes closed",
- "c0-00b-rating.html": "Rate the volunteer",
+ "c0-00b-rating.html": "Talk about it",
  "c0-01-question.html": "Why did we see different things",
  "c0-02-two-systems.html": "Two systems",
  "c0-08-kahneman.html": "Kahneman and Tversky",
